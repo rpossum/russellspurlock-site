@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apps — Russell Spurlock</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #004080;
+      --accent-color: #ff8000;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1f1f1f;
+      background-color: #f9f9f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+
+    header a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    header a:hover {
+      color: var(--accent-color);
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 0;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .page-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    .app-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    .app-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      color: inherit;
+    }
+
+    .app-card.coming-soon {
+      opacity: 0.6;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 16px;
+    }
+
+    .app-icon-placeholder {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .app-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .app-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    .badge-soon {
+      background-color: #e0e0e0;
+      color: #666;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      color: #333;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="/">&larr; russellspurlock.com</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="page-title">Aviation Apps</h1>
+      <p class="page-subtitle">Tools built for pilots, by a pilot.</p>
+
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-sm-6 col-lg-3">
+          <a href="https://checksmart.russellspurlock.com/" target="_blank" class="app-card">
+            <img src="/images-new/app-checksmart.png" alt="CheckSmart" class="app-icon">
+            <h3>CheckSmart</h3>
+            <p>Smart, interactive checklists for any aircraft or procedure.</p>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <a href="https://135radar.russellspurlock.com/" target="_blank" class="app-card">
+            <img src="/images-new/app-135radar.png" alt="135Radar" class="app-icon">
+            <h3>135Radar</h3>
+            <p>Track and explore Part 135 charter operators and routes.</p>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <a href="https://studysmart.russellspurlock.com/" target="_blank" class="app-card">
+            <img src="/images-new/app-studysmart.png" alt="StudySmart" class="app-icon">
+            <h3>StudySmart</h3>
+            <p>Aviation study tools and flashcards for certificate exams.</p>
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="app-card coming-soon">
+            <img src="/images-new/app-chartwise.svg" alt="ChartWise" class="app-icon">
+            <h3>ChartWise <span class="badge-soon">Coming Soon</span></h3>
+            <p>Aviation chart study and approach briefing tools.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="mb-0">© <span id="copyright-year"></span> Russell Spurlock</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
