@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /score_music_downloads/
+Disallow: /scoring/
+Disallow: /ThePhone_Scoring/
+Disallow: /skins/
+Disallow: /scoring/
+Disallow: /audio/
+Disallow: /alphafemale/
+Disallow: /reel/
+Disallow: /thinkFast_NBC/
+Disallow: /halfdaymentor.com/

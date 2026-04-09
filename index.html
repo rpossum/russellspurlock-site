@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Russell Spurlock - Flight Instructor & Commercial Pilot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --primary-color: #004080;
+    --accent-color: #ff8000;
+    --text-color: #1f1f1f;
+    --bg-light: #f9f9f9;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  /* ===========================
+     Navbar
+  ============================ */
+  .navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar-brand {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    font-size: 1rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .nav-link {
+    color: var(--text-color) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+  }
+
+  .nav-link:hover {
+    color: var(--primary-color) !important;
+  }
+
+  /* ===========================
+     Hero Section
+  ============================ */
+  .hero {
+    background: url('images-new/hero-main.jpg') center center / cover no-repeat;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: none;
+    z-index: 1;
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem;
+  }
+
+  .hero-logo {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    max-width: 160px;
+    height: auto;
+    z-index: 10;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+  }
+
+  .hero-logo img {
+    max-width: 180px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.6));
+  }
+
+  /* ===========================
+     Sections & Components
+  ============================ */
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+
+  .testimonial {
+    font-style: italic;
+  }
+
+  .carousel-inner img {
+    border-radius: 8px;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  }
+
+  footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  section {
+    scroll-margin-top: 80px;
+    padding: 80px 0;
+  }
+
+  table {
+    margin: 0 auto;
+    border: none;
+  }
+
+  iframe {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+
+  /* ===========================
+     Buttons
+  ============================ */
+  .btn-orange {
+    background-color: var(--accent-color);
+    color: white;
+  }
+
+  .btn-orange:hover {
+    background-color: #e67300;
+    color: white;
+  }
+
+  .btn-outline-light {
+    border-color: white;
+    color: white;
+  }
+
+  .btn-outline-light:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  /* ===========================
+     Responsive
+  ============================ */
+  @media (max-width: 768px) {
+    .hero {
+      background-image: url('images-new/hero-mobile.jpg');
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .navbar-brand {
+      font-size: 0.85rem;
+    }
+
+    .hero-logo {
+      top: calc(1rem + 48px);
+      right: 16px;
+      max-width: 90px;
+    }
+
+    .btn-orange,
+    .btn-outline-light {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-desktop {
+      display: none !important;
+    }
+
+    .brand-mobile {
+      display: inline !important;
+    }
+  }
+
+  /* Desktop brand defaults */
+  .brand-desktop {
+    display: inline;
+  }
+
+  .brand-mobile {
+    display: none;
+  }
+</style>
+
+  
+
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNavDropdown" data-bs-offset="100" tabindex="0">
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">
+            <span class="brand-desktop">Russell Spurlock : Commercial Pilot : Flight Instructor</span>
+            <span class="brand-mobile d-none">Russell Spurlock, CFII</span>
+          </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#training">Training</a></li>
+          <li class="nav-item"><a class="nav-link" href="#jet">Turbine</a></li>
+          <li class="nav-item"><a class="nav-link" href="#scheduling">Scheduling</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rates">Rates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero -->
+  <section class="hero d-flex align-items-center position-relative">
+    <!-- Top-right logo -->
+    <img src="images-new/plane_wht_clr.png" alt="Logo" class="hero-logo">
+  
+    <!-- Main content -->
+    <div class="container text-center">
+      <h1 class="display-4">Flight Instructor • Commercial Pilot</h1>
+      <p class="lead mb-4">Helping you earn your wings — from your first takeoff to your first turbine job.</p>
+      <a href="#contact" class="btn btn-orange me-3">Book a Discovery Flight</a>
+      <a href="#training" class="btn btn-outline-light">View Training Options</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-4">About Me</h2>
+      <!-- <div class="row text-center">
+        <div class="col-md-3">
+          <h5>Total Flight Time</h5>
+          <p>+1150 hours</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Jet / Turbine Time</h5>
+          <p>+20 hours</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Ratings</h5>
+          <p>CFI, CFII, Commercial, Instrument, CSES</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Ops</h5>
+          <p>Flying Part 91 / pursuing 135</p>
+        </div>
+      </div> -->
+      <div class="row mt-4 align-items-center">
+        <div class="col-md-6">
+          <img src="images-new/kingair-350.jpg" class="img-fluid rounded" alt="Russell flying">
+        </div>
+        <div class="col-md-6">
+          <p>I’m Russell Spurlock — a Certified Flight Instructor and Commercial Pilot in Florida. My daily work as a CFII keeps me sharp and connected to the fundamentals, while my experience in jet and turboprop operations has given me valuable real-world perspective. Together, these experiences position me as a well-rounded pilot ready to grow in professional turbine flying.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flight Training -->
+  <section id="training" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center section-title mb-5">Flight Training</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h4>Programs Offered</h4>
+          <ul>
+            <li>Sport Pilot License</li>
+            <li>Private Pilot License</li>
+            <li>Instrument Rating</li>
+            <li>Commercial Rating</li>
+            <li>CFI and CFII</li>
+            <li>Discovery Flights</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+            <div id="trainingCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images-new/training-01.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Training Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images-new/training-02.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Training Image 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="images-new/training-03.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Training Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images-new/training-04.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Training Image 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images-new/training-05.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Training Image 3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images-new/training-06.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Training Image 3">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#trainingCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#trainingCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jet Experience -->
+  <section id="jet" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-4">Turbine Experience & Part 91/135 Path</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>I’m building turbine time while pursuing opportunities under Part 135 charter and corporate ops. I bring this real-world context into every lesson — mentoring students on CRM, ATC, procedures, and turbine ops expectations. Whether you're looking to fly jets or just fly better, I bring that mindset to your training.</p>
+        </div>
+        <div class="col-md-6">
+            <div id="jetCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                
+                
+                <div class="carousel-item">
+                    <img src="images-new/visionjet-01.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Cirrus Vision Jet">
+                </div>
+                
+                <div class="carousel-item">
+                    <img src="images-new/kingair-350.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="King Air 350i">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images-new/visionjet-01.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Cirrus Vision Jet">
+                  </div>
+                  <div class="carousel-item active">
+                    <img src="images-new/pilatus-01.jpg" class="d-block w-100" style="height: 300px; object-fit: cover;" alt="Pilatus PC-12">
+                  </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#jetCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#jetCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center section-title mb-5">What Students Say</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="p-4 bg-white rounded shadow-sm testimonial">
+            <p>“It has been thoroughly enjoyable to train with Russell! He is a dedicated professional and has a great demeanor to coach students for success!”</p>
+            <p class="text-end fw-bold">— Mark S. :: PP</p>
+          </div>
+          <div class="p-4 bg-white rounded shadow-sm testimonial">
+            <p>“Russell’s an awesome CFI who makes flying a blast, tailors every lesson to you, uses top-notch tools to teach, brings a positive vibe that keeps you excited to learn, and inspires confidence with his clear, patient instruction!”</p>
+            <p class="text-end fw-bold">— Roberto S. :: IFR</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="p-4 bg-white rounded shadow-sm testimonial">
+            <p>“Learning to fly with Russell Spurlock has been an outstanding experience. He is not only an expert in FAA instruction, but he takes the time to look at the whole person when teaching. Russell knows how to get the best out of his student pilots in the cockpit, but what really sets him apart is his ability to blend flight instruction with life lessons.<br><br>
+
+                He emphasizes the importance of remaining calm, focused, and composed under pressure—skills that are invaluable both in aviation and beyond. His patient, encouraging style makes complex concepts clear, and his steady presence instills confidence in every student.<br><br>
+                
+                If you are looking for a flight instructor who is not only highly knowledgeable and professional, but also genuinely invested in your growth as both a pilot and a person, I cannot recommend Russell Spurlock enough.”</p>
+            <p class="text-end fw-bold">— Peter A :: IFR</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Test Cal -->
+  
+
+  <!-- Scheduling Section -->
+<section id="scheduling" class="py-5">
+    <div class="container text-left">
+      <h2 class="section-title mb-4">Schedule Your Flight</h2>
+      <p class="lead mb-4">Ready to train or take your first discovery flight? Check my availability and lock in your flight time now.</p>
+      <p class="testimonial mb-4">If you fly with the Fort Myers Flying Club or Flyrite and are already set up in the Flight Circle system, you can book me through Flight Circle, but be sure to check my availability here first.
+        Just click the date below and see if the desired timeslot is available. If it is, then book me through FlightCircle and it will update me there and here.</p>
+  
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td align="center" bgcolor="#000000">
+            <iframe src="https://koalendar.com/e/flight-training-with-russell?embed=true" width="100%" height="800px" frameborder="0"></iframe>
+          </td>
+        </tr>
+      </table><br />
+      
+      <p class="mt-3">Prefer to talk first? <a href="#contact">Send me a message</a> and we’ll book your lesson together.</p>
+    </div>
+  </section>
+
+  <!-- Rates -->
+  <section id="rates" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-5">Rates & Packages</h2>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div class="border p-4 rounded">
+            <h4>Discovery Flight</h4>
+            <p class="fs-4 text-warning">$225</p>
+            <p>1-hour flight + briefing/debrief</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="border p-4 rounded">
+            <h4>Hourly Instruction</h4>
+            <p class="fs-4 text-warning">Custom Quote</p>
+            <p>Applies to both flight and ground</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="border p-4 rounded">
+            <h4>Commercial Prep</h4>
+            <p class="fs-4 text-warning">Custom Quote</p>
+            <p>Multi, advanced avionics, x-country</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center section-title mb-4">Contact Me</h2>
+      <form action="https://formspree.io/f/xdklqkoz" method="post" class="mx-auto" style="max-width: 600px;">
+        <div class="mb-3">
+          <input type="text" name="name" placeholder="Your Name" required class="form-control" />
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" placeholder="Your Email" required class="form-control" />
+        </div>
+        <div class="mb-3">
+          <select name="interest" class="form-select" required>
+            <option value="" selected disabled>What are you interested in?</option>
+            <option>Discovery Flight</option>
+            <option>PPL Training</option>
+            <option>Instrument Rating</option>
+            <option>Commercial Rating</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <textarea name="message" rows="4" class="form-control" placeholder="Your Message (optional)"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-orange px-5">Send</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="py-4">
+    <div class="container text-center">
+      <p class="mb-2">© 2025 Russell Spurlock | Cape Coral, FL</p>
+      <div class="d-flex justify-content-center gap-4">
+        <a href="https://www.facebook.com/FlyWithRussell" target="_blank" class="text-dark fs-4">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/russell-spurlock-6b03b1276/" target="_blank" class="text-dark fs-4">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://www.youtube.com/PossumPilot" target="_blank" class="text-dark fs-4">
+          <i class="bi bi-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Collapse Navbar on Link Click -->
+  <script>
+    // Enhanced nav scroll + collapse + scrollspy
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+          }
+  
+          // Collapse navbar if open
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarCollapse.classList.contains('show')) {
+            new bootstrap.Collapse(navbarCollapse).toggle();
+          }
+        });
+      });
+    });
+  
+    // Refresh ScrollSpy manually in case content loads dynamically
+    window.addEventListener('load', () => {
+      const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#navbarNavDropdown',
+        offset: 100
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
