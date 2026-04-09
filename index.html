@@ -512,7 +512,7 @@
   <!-- Footer -->
 <footer class="py-4">
     <div class="container text-center">
-      <p class="mb-2">© 2025 Russell Spurlock | Cape Coral, FL</p>
+      <p class="mb-2">© <span id="copyright-year"></span> Russell Spurlock | Cape Coral, FL</p>
       <div class="d-flex justify-content-center gap-4">
         <a href="https://www.facebook.com/FlyWithRussell" target="_blank" class="text-dark fs-4">
           <i class="bi bi-facebook"></i>
@@ -520,15 +520,13 @@
         <a href="https://www.linkedin.com/in/russell-spurlock-6b03b1276/" target="_blank" class="text-dark fs-4">
           <i class="bi bi-linkedin"></i>
         </a>
-        <a href="https://www.youtube.com/PossumPilot" target="_blank" class="text-dark fs-4">
-          <i class="bi bi-youtube"></i>
-        </a>
       </div>
     </div>
   </footer>
   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
   <!-- Collapse Navbar on Link Click -->
   <script>
     // Enhanced nav scroll + collapse + scrollspy
