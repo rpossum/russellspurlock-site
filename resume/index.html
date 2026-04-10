@@ -1,6 +1,560 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://drive.google.com/uc?export=download&id=12uoUH9z4zDMh1kBA9MTNTF01pMT5qDHh">
-  </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume - Russell Spurlock | Commercial Pilot & CFII</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --primary-color: #004080;
+    --accent-color: #ff8000;
+    --text-color: #1f1f1f;
+    --bg-light: #f9f9f9;
+  }
+
+  /* === Navbar & Footer: site fonts === */
+  .navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Inter', sans-serif;
+  }
+  .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    font-size: 1rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .nav-link {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color) !important;
+    font-weight: 500;
+    margin-left: 1rem;
+  }
+  .nav-link:hover { color: var(--primary-color) !important; }
+
+  footer {
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  a { text-decoration: none; }
+
+  /* === Resume body: Times === */
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--primary-color);
+    background: var(--bg-light);
+  }
+
+  /* Resume container */
+  .resume-page {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+    padding: 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-plane {
+    display: block;
+    margin: 6px auto 0 auto;
+    width: 80px;
+    height: auto;
+  }
+
+  /* Header */
+  .resume-name {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .resume-contact {
+    text-align: center;
+    font-size: 10pt;
+    margin-bottom: 10px;
+  }
+
+  .resume-contact a { color: var(--primary-color); }
+
+  .header-rule {
+    border: none;
+    border-top: 1px solid var(--primary-color);
+    margin: 0 0 18px 0;
+  }
+
+  /* Two-column rows */
+  .cv-row {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+
+  .cv-label {
+    flex: 0 0 120px;
+    font-weight: bold;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    padding-top: 1px;
+  }
+
+  .cv-content {
+    flex: 1;
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+
+  .cv-content p {
+    margin: 0 0 4px 0;
+  }
+
+  /* === Styled section headers === */
+  .section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+
+  .section-title i {
+    margin-right: 6px;
+    color: var(--accent-color);
+  }
+
+  /* === Certificate badges === */
+  .certs-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .certs-list li {
+    background: #e8f0fa;
+    color: var(--primary-color);
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #d0dff0;
+  }
+
+  /* === Flight time cards === */
+  .flight-times-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .ft-card {
+    background: #f7f9fc;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+
+  .ft-card .ft-label {
+    font-size: 0.52rem;
+    color: var(--primary-color);
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    margin-bottom: 1px;
+  }
+
+  .ft-card .ft-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  .ft-card.ft-total {
+    border-color: var(--primary-color);
+    border-width: 2px;
+  }
+
+  .ft-card.ft-total .ft-value {
+    font-size: 1.12rem;
+  }
+
+  /* === Work entries (Times) === */
+  .work-block { margin-bottom: 10px; }
+
+  .work-date {
+    font-style: italic;
+    font-size: 9pt;
+    color: var(--primary-color);
+  }
+
+  .work-title {
+    font-weight: bold;
+    font-size: 10pt;
+  }
+
+  .work-bullets {
+    padding-left: 18px;
+    margin: 2px 0 0 0;
+    font-size: 10pt;
+    list-style-type: disc;
+  }
+
+  .work-bullets li { margin-bottom: 1px; }
+
+  /* Aircraft */
+  .aircraft-text {
+    font-size: 9pt;
+    line-height: 1.55;
+  }
+
+  .aircraft-text .bold-part { font-weight: bold; }
+
+  /* Education two-column */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+  }
+
+  .edu-item {
+    font-size: 9.5pt;
+    margin-bottom: 6px;
+  }
+
+  .edu-item .school { font-weight: bold; }
+  .edu-item .detail { padding-left: 18px; }
+
+  /* Volunteer */
+  .vol-text { font-size: 10pt; }
+
+  /* === Download bar === */
+  .download-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .btn-download {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-download:hover {
+    background: #003060;
+    color: #fff;
+  }
+
+  .btn-download-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0.55rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .btn-download-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+  }
+
+  /* === Mobile === */
+  @media (max-width: 640px) {
+    .resume-page {
+      padding: 24px 20px;
+      box-shadow: none;
+    }
+    .cv-row {
+      flex-direction: column;
+      gap: 2px;
+    }
+    .cv-label { flex: none; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .flight-times-grid { grid-template-columns: repeat(2, 1fr); }
+    .resume-name { font-size: 18pt; }
+  }
+
+  /* === Print === */
+  @media print {
+    .navbar, footer, .download-section { display: none !important; }
+    body { background: #fff; }
+    .resume-page { box-shadow: none; margin: 0; padding: 0; }
+    .resume-page::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="/">Russell Spurlock</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#training">Training</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#jet">Turbine</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="height: 80px;"></div>
+
+<!-- Download buttons (top) -->
+<section class="download-section py-4">
+  <div class="container">
+    <div class="download-bar">
+      <a href="https://drive.google.com/uc?export=download&id=12uoUH9z4zDMh1kBA9MTNTF01pMT5qDHh" class="btn-download">
+        <i class="bi bi-download"></i> Download Resume (PDF)
+      </a>
+      <a href="https://drive.google.com/uc?export=download&id=1PWv9v9xrka4Yq61fm1CKEXS9dJMEWWhr" class="btn-download-outline">
+        <i class="bi bi-download"></i> Resume + Cover Letter (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Resume -->
+<section class="pb-5">
+  <div class="container">
+    <div class="resume-page">
+
+      <!-- Header -->
+      <div class="resume-name">Russell Spurlock</div>
+      <div class="resume-contact">
+        (310) 896-5553 &bull; <a href="mailto:russell@russellspurlock.com">russell@russellspurlock.com</a>
+      </div>
+      <img src="/images-new/plane_blue.png" alt="" class="header-plane">
+      <hr class="header-rule">
+
+      <!-- Objective -->
+      <div class="cv-row">
+        <div class="cv-label">Objective:</div>
+        <div class="cv-content">
+          CFII with multi-engine rating and 1,554+ hours seeking an SIC position in Part 135 and Part 91
+          operations. Brings professional maturity, turbojet experience, and a genuine commitment to the charter
+          and corporate segment &mdash; not as a stepping stone, but as a long-term career.
+        </div>
+      </div>
+
+      <!-- Certificates & Ratings (styled) -->
+      <div class="section-title"><i class="bi bi-award"></i> Certificates &amp; Ratings</div>
+      <ul class="certs-list" style="margin-bottom: 20px;">
+        <li>IFR</li>
+        <li>CSEL</li>
+        <li>CSES</li>
+        <li>CMEL</li>
+        <li>CFI</li>
+        <li>CFII</li>
+        <li>Part 107 Drone</li>
+        <li>1st Class Medical</li>
+        <li>FCC License</li>
+        <li>US Passport</li>
+      </ul>
+
+      <!-- Flight Times (styled cards) -->
+      <div class="section-title"><i class="bi bi-speedometer2"></i> Flight Times</div>
+      <div class="flight-times-grid" style="margin-bottom: 20px;">
+        <div class="ft-card ft-total">
+          <div class="ft-label">Total</div>
+          <div class="ft-value">1,554</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">PIC</div>
+          <div class="ft-value">1,450</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">Instrument</div>
+          <div class="ft-value">148</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">Cross-Country</div>
+          <div class="ft-value">574</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">Prev 12 Months</div>
+          <div class="ft-value">683</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">Multi-Engine</div>
+          <div class="ft-value">85</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">Turbine</div>
+          <div class="ft-value">27</div>
+        </div>
+        <div class="ft-card">
+          <div class="ft-label">Vision Jet (unlogged)</div>
+          <div class="ft-value">+9</div>
+        </div>
+      </div>
+
+      <!-- Work History -->
+      <div class="section-title"><i class="bi bi-briefcase"></i> Work History</div>
+      <div style="margin-bottom: 20px;">
+
+        <div class="work-block">
+          <div class="work-date">01/24 - Present</div>
+          <div class="work-title">SIC : Eclipse 500, KingAir 350i, KingAir 300, Cirrus Vision Jet, Pilatus PC-12, Cessna 414, Beechcraft Baron, Beech 18</div>
+          <ul class="work-bullets">
+            <li>Flying right seat, learning CRM skills from experienced pilots</li>
+          </ul>
+          <div class="work-title">Independent CFII @ KFMY</div>
+          <ul class="work-bullets">
+            <li>Training Private, Instrument, Commercial and CFI/CFII students to the highest standards. Flying a wide variety of aircraft on a daily basis.</li>
+          </ul>
+          <div class="work-title">Ferry Pilot</div>
+          <ul class="work-bullets">
+            <li>Recently ferried an RV6a from KFMY to KTOA coast to coast</li>
+          </ul>
+        </div>
+
+        <div class="work-block">
+          <div class="work-date">June '23 - Aug '24</div>
+          <div class="work-title">Drone Op / Commercial</div>
+        </div>
+
+        <div class="work-block">
+          <div class="work-date">Prior to June '23</div>
+          <div class="work-title">Flight Training</div>
+        </div>
+
+        <p><strong>Drone Operator</strong> for Film and TV, including 2 years on Top Gear America</p>
+        <p><strong>Composer</strong> for Film and TV</p>
+        <p>Private Pilot - 2011</p>
+        <p>Sport Pilot - 2008</p>
+      </div>
+
+      <!-- Aircraft Flown -->
+      <div class="section-title"><i class="bi bi-airplane"></i> Aircraft Flown</div>
+      <div class="aircraft-text" style="margin-bottom: 20px;">
+        <span class="bold-part">Eclipse 500, King Air 350i &amp; 300, Pilatus PC-12, Cirrus Vision Jet,</span>
+        Beech 18, Beechcraft 58 Baron, Beechcraft B36 &amp; B35, Cirrus SR20, C10T (Silver Eagle Turbine), C414, C210, C182, C172, C172 (float), C150, PA44, PA30, PA28 ~ MOONEY M20 ~ RV10, RV6a, SeaRey, various Hang Gliders and Gliders
+      </div>
+
+      <!-- Avionics -->
+      <div class="section-title"><i class="bi bi-display"></i> Avionics Experience</div>
+      <p style="margin-bottom: 20px;">
+        <strong>Collins Pro Line, G1000, G3000, Avio IFMS, G3x, G753, G5</strong>
+      </p>
+
+      <!-- Education -->
+      <div class="section-title"><i class="bi bi-mortarboard"></i> Education</div>
+      <div class="edu-grid" style="margin-bottom: 20px;">
+        <div>
+          <div class="edu-item">
+            <div class="school">Sky Riders Aviation - 2009</div>
+            <div class="detail">&bull; Sport Pilot</div>
+          </div>
+          <div class="edu-item">
+            <div class="school">Angel City Flyers (Long Beach) - 2011</div>
+            <div class="detail">&bull; PPL</div>
+          </div>
+          <div class="edu-item">
+            <div class="school">Jones Brothers - 2023</div>
+            <div class="detail">&bull; Commercial Seaplane</div>
+          </div>
+          <div class="edu-item">
+            <div class="school">High School Diploma - 1988</div>
+          </div>
+        </div>
+        <div>
+          <div class="edu-item">
+            <div class="school">Paragon Flight Training - 2023</div>
+            <div class="detail">&bull; IFR Rating / Commercial Ratings</div>
+            <div class="detail">&bull; Single Engine / Multi Engine</div>
+          </div>
+          <div class="edu-item">
+            <div class="school">Fort Myers Flying Club - 2024</div>
+            <div class="detail">&bull; CFI &amp; CFII Ratings</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volunteer -->
+      <div class="section-title"><i class="bi bi-heart"></i> Volunteer</div>
+      <div class="vol-text">
+        <strong>Fort Myers Flying Club</strong>; VP - Board Of Directors and Programs Chair<br>
+        <strong>EAA Chapter 66</strong>; Monthly Safety Speaker
+      </div>
+
+    </div><!-- /resume-page -->
+  </div>
+</section>
+
+<!-- Download buttons (bottom) -->
+<section class="download-section pb-5">
+  <div class="container">
+    <div class="download-bar">
+      <a href="https://drive.google.com/uc?export=download&id=12uoUH9z4zDMh1kBA9MTNTF01pMT5qDHh" class="btn-download">
+        <i class="bi bi-download"></i> Download Resume (PDF)
+      </a>
+      <a href="https://drive.google.com/uc?export=download&id=1PWv9v9xrka4Yq61fm1CKEXS9dJMEWWhr" class="btn-download-outline">
+        <i class="bi bi-download"></i> Resume + Cover Letter (PDF)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4">
+  <div class="container text-center">
+    <p class="mb-2">&copy; <span id="copyright-year"></span> Russell Spurlock | Cape Coral, FL</p>
+    <div class="d-flex justify-content-center gap-4">
+      <a href="https://www.facebook.com/FlyWithRussell" target="_blank" class="text-dark fs-4">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/russell-spurlock-6b03b1276/" target="_blank" class="text-dark fs-4">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</body>
 </html>
