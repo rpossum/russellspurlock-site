@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Possum Pilot - Free Aviation Study Guides | Russell Spurlock</title>
+  <meta name="description" content="Free aviation study guides for IFR, Commercial, Multi-Engine, CFI, and aircraft systems — created by CFII Russell Spurlock." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #004080;
+      --accent-color: #ff8000;
+      --text-color: #1f1f1f;
+      --bg-light: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background: var(--bg-light);
+    }
+
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+    a { text-decoration: none; }
+
+    .navbar {
+      background: #ffffff !important;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar-brand {
+      font-weight: 600;
+      color: var(--primary-color) !important;
+      font-size: 1rem;
+    }
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+      margin-left: 1rem;
+    }
+    .nav-link:hover { color: var(--primary-color) !important; }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #002855 100%);
+      color: #fff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-weight: 700;
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+    .page-hero p { font-size: 1.15rem; opacity: 0.9; margin: 0 auto; max-width: 780px; }
+    .page-hero .possum-logo { width: 90px; margin-bottom: 18px; }
+
+    .section { padding: 64px 0; }
+    .section:nth-of-type(even) { background: #fff; }
+
+    .section h2 {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .section .lead-text {
+      max-width: 820px;
+      margin-bottom: 2rem;
+      color: #444;
+    }
+
+    .guide-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      height: 100%;
+    }
+    .guide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .guide-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .guide-card .card-label {
+      padding: 12px 14px;
+      font-weight: 600;
+      color: var(--primary-color);
+      font-size: 0.95rem;
+      border-top: 1px solid #eee;
+    }
+
+    .section:nth-of-type(even) .guide-card { background: var(--bg-light); }
+
+    .slides-links { font-size: 0.95rem; }
+    .slides-links a { color: var(--primary-color); }
+    .slides-links a:hover { color: var(--accent-color); }
+
+    .note {
+      background: #fff8ec;
+      border-left: 4px solid var(--accent-color);
+      padding: 14px 18px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      margin-top: 1.5rem;
+    }
+
+    footer {
+      background-color: #f1f1f1;
+      color: #333;
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 24px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="/">Russell Spurlock</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#training">Training</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#jet">Turbine</a></li>
+        <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="height: 70px;"></div>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container">
+    <img src="/images-new/possumpilot/possum logo 01 - no text.png" alt="Possum Pilot" class="possum-logo">
+    <h1>The Possum Pilot</h1>
+    <p>Free aviation study guides I built while earning each of my ratings. Different folks have different ways of studying — for me, flash-card style works best. Hope these help you as much as they helped me.</p>
+  </div>
+</section>
+
+<!-- Instrument -->
+<section class="section">
+  <div class="container">
+    <h2>Instrument Rating Study Guides</h2>
+    <p class="lead-text">These three study guides helped me pass my IFR oral exam and checkride. Run through them at least once a day leading up to your checkride and you'll be in great shape. <em>Click an image to launch.</em></p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vRHQEdcc9cxQJvk0AOjBCIN95D6EG5VHq8k9lgqEapEhuNLS_t1pdwJgMcuj-l-eIW3TAuJfJD2bz3Y/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/ifr-acs.jpg" alt="IFR ACS Study Guide">
+            <div class="card-label">IFR ACS Study Guide</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vT77Ho-rUNVg8pooRrQ5vIQd-4qO2SlMNTW_f2526cfiE8jZWPHpMt3aUR5GW9UHbClVb3s9-gZ-cNc/pub?start=false&loop=true&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/ifr-mnemonics.jpg" alt="IFR Mnemonics">
+            <div class="card-label">IFR Mnemonics</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vT0WldbwTBv_ixXJcWhBTromUCT-iCXsyAcgDWpiieKw-FzHCXmvss7Y3RxbYOXL3YG92miZ8Lvo4wB/pub?start=false&loop=true&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/ifr-charts.jpg" alt="IFR Charts">
+            <div class="card-label">IFR Charts Study Guide</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="slides-links mt-4">
+      <strong>Prefer to jump around in the original Slides?</strong><br>
+      <a href="https://docs.google.com/presentation/d/1iTaCL68MDv5ruxr3roiyDg0Rp3FboBg1CLOxhGHd1R0/edit?usp=sharing" target="_blank">IFR ACS Study Guide - Slides</a><br>
+      <a href="https://docs.google.com/presentation/d/1VuYNdTlDefaOoLEhK5ce-lJ3ED0ptgTPVmYxi8KdR8Y/edit?usp=sharing" target="_blank">IFR Charts Study Guide - Slides</a><br>
+      <a href="https://docs.google.com/presentation/d/1wPq8H7s5LydrZGzUiZjeY6n1v1lpLmiFuGDC_ivci8I/edit?usp=sharing" target="_blank">IFR Mnemonics Study Guide - Slides</a>
+    </div>
+  </div>
+</section>
+
+<!-- Commercial -->
+<section class="section">
+  <div class="container">
+    <h2>Commercial Rating Study Guides</h2>
+    <p class="lead-text">Same deal — work the mnemonics and charts, learn all the ACS knowledge. Commercial is cumulative on top of IFR and Private, so keep reviewing the older stuff too. Go through these once a day leading up to your checkride. Break a leg!</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vQWLxTp-XjMJKTqtqeUm3NUrJ5BV5Sw6YcmH4KbKTz-Kt-smyFDXSjc-Is5X2e3IpDleioqpzC3ZwFT/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/com-acs.jpg" alt="Commercial ACS">
+            <div class="card-label">Commercial ACS Study Guide</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vTrRcd6oy8aCdl20PyMor2LZJyV9UIg7dNL3bTdBuHPAEoltZvYPgfMEQeK8MkblOjN_X5rp66EEUSE/pub?start=false&loop=true&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/com-mnemonics.jpg" alt="Commercial Mnemonics">
+            <div class="card-label">Commercial Mnemonics</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vT4K1mRyrK-33oP8HjanobLRgwX3uMoUkIqw79qWXvfxjTU804Q-57j-mF64DiKbQOC22Gyu4WQ9qld/pub?start=false&loop=true&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/vfr-charts.jpg" alt="VFR Charts">
+            <div class="card-label">VFR Charts Study Guide</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Multi -->
+<section class="section">
+  <div class="container">
+    <h2>Multi Engine Add-On Study Guides</h2>
+    <p class="lead-text">With Multi you're learning a new airplane, so take the time to know that plane inside and out. And Multi is really all about how you'll deal with an engine failure and safely fly on one engine. Break a leg!</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vQcdVVCtuWa2uFQwdF_Y-S6NWUQpkSNjlLAP24dxBAaQ23XezVOkZFufTZTcxyXa6FmbwUP535IKt8C/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/multi-checkride.jpg" alt="Multi Checkride">
+            <div class="card-label">Multi Checkride Study Guide</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vRX0RpsPpq4btUX2uDt8CU-BhdgCLl-LmlQGeTcFiiI3D8fvQL4LWppDbOfF484yJdQdK22hcKI7g1n/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/airplane-pa44.jpg" alt="PA-44 Seminole">
+            <div class="card-label">Know Your Airplane: PA-44 Seminole (FI, G1000)</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CFI -->
+<section class="section">
+  <div class="container">
+    <h2>CFI Study Guides</h2>
+    <p class="lead-text">Because CFI and CFII harken back to previous ratings so much, I didn't create a lot of new material — but here's a good one for the FOIs.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="https://docs.google.com/presentation/d/1_LkBGVmZtlPuxAN3FnnEX9bC52vy5K1zZkGmcASDiBc/pub?start=false&loop=true&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/foi.jpg" alt="FOI Study Guide">
+            <div class="card-label">Fundamentals of Instruction (FOI)</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Know Your Airplane -->
+<section class="section">
+  <div class="container">
+    <h2>Know Your Airplane Study Guides</h2>
+    <p class="lead-text">I've done four of these. These are specific to particular planes in particular configurations — if your plane is different, <em>know that plane!</em></p>
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vSHUL3QGxPJh_qTB70F43MQnTE_yb-wcWsUGkOwm9QsYQAQJ8yAx2g7cWSR0niUUaoZuRMk9SsWh1_e/pub?start=false&loop=true&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/airplane-p100.jpg" alt="Piper Pilot 100i">
+            <div class="card-label">Piper Pilot 100i</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vRX0RpsPpq4btUX2uDt8CU-BhdgCLl-LmlQGeTcFiiI3D8fvQL4LWppDbOfF484yJdQdK22hcKI7g1n/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/airplane-pa44.jpg" alt="Piper Seminole PA-44">
+            <div class="card-label">Piper Seminole PA-44 (FI, G1000)</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vT36iG-og4Qk8jR60Qro5zN2XA73mSVT6MUgjoo2Itj-yrOWOT413XNzyVx-6hPf7p5wmHHViIRGEG7/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/know-the-da40.jpg" alt="Diamond DA40">
+            <div class="card-label">Diamond DA40</div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <a href="https://docs.google.com/presentation/d/e/2PACX-1vSVg5HBqPE2pqmJrBmvVdjj9XCfSd8DUWnE-Ajw0-6gCOIcFBR9TdJp46AURRKJCW3VbT1X4efUILs4/pub?start=false&loop=false&delayms=60000" target="_blank" class="d-block">
+          <div class="guide-card">
+            <img src="/images-new/possumpilot/airplane-172s.jpg" alt="Cessna 172S">
+            <div class="card-label">Cessna 172S</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="note">
+      Want a <strong>Know Your Airplane</strong> guide for your aircraft? Send me an organized spreadsheet with all the info you see in these slides, plus anything else you think belongs in there. When I have time I just may be able to put it together for you. <a href="mailto:russell@russellspurlock.com?subject=Know%20Your%20Airplane%20guide">Get in touch</a>.
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p class="mb-2">&copy; <span id="copyright-year"></span> Russell Spurlock | Cape Coral, FL</p>
+    <div class="d-flex justify-content-center gap-4">
+      <a href="https://www.facebook.com/FlyWithRussell" target="_blank" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/russell-spurlock-6b03b1276/" target="_blank" class="text-dark fs-4"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
