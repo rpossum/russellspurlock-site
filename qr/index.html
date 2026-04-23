@@ -92,6 +92,48 @@
 
     .qr-url a { color: var(--primary-color); }
 
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #999;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 28px 0 20px;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e0e0e0;
+    }
+
+    .form-label-sm {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 4px;
+      display: block;
+      text-align: left;
+    }
+
+    .send-btn {
+      background: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .send-btn:hover, .send-btn:focus {
+      background: #e67300;
+      color: #fff;
+    }
+
     .tap-btn {
       display: block;
       width: 100%;
@@ -162,6 +204,30 @@
       <i class="bi bi-download"></i> Download QR image
     </a>
 
+    <div class="divider">Send Me Yours</div>
+
+    <form id="send-form" novalidate>
+      <div class="mb-2">
+        <label for="f-name" class="form-label-sm">Your name</label>
+        <input id="f-name" type="text" class="form-control" required autocomplete="name" />
+      </div>
+      <div class="mb-2">
+        <label for="f-email" class="form-label-sm">Email</label>
+        <input id="f-email" type="email" class="form-control" autocomplete="email" />
+      </div>
+      <div class="mb-2">
+        <label for="f-phone" class="form-label-sm">Phone</label>
+        <input id="f-phone" type="tel" class="form-control" autocomplete="tel" />
+      </div>
+      <div class="mb-3">
+        <label for="f-note" class="form-label-sm">How we met (optional)</label>
+        <input id="f-note" type="text" class="form-control" />
+      </div>
+      <button type="submit" class="send-btn">
+        <i class="bi bi-envelope-fill"></i> Send to Russell
+      </button>
+    </form>
+
     <p class="site-link"><a href="/">russellspurlock.com</a></p>
   </div>
 </main>
@@ -170,6 +236,34 @@
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  document.getElementById('send-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name  = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var note  = document.getElementById('f-note').value.trim();
+
+    if (!name) {
+      document.getElementById('f-name').focus();
+      return;
+    }
+
+    var subject = 'Contact info from ' + name;
+    var bodyLines = [
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone: ' + phone
+    ];
+    if (note) bodyLines.push('How we met: ' + note);
+    bodyLines.push('', 'Sent from russellspurlock.com/qr');
+
+    var href = 'mailto:russell@russellspurlock.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body='    + encodeURIComponent(bodyLines.join('\n'));
+
+    window.location.href = href;
+  });
 </script>
 
 <!-- Vercel Web Analytics -->
