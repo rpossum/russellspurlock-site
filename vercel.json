@@ -1,11 +1,12 @@
 {
   "headers": [
     {
-      "source": "/(.*)\\.vcf",
+      "source": "/card/russell-spurlock.vcf",
       "headers": [
-        { "key": "Content-Type", "value": "text/vcard; charset=utf-8" },
+        { "key": "Content-Type", "value": "application/octet-stream" },
         { "key": "Content-Disposition", "value": "attachment; filename=\"russell-spurlock.vcf\"" },
-        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" }
       ]
     }
   ]
