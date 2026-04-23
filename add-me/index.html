@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Russell Spurlock — QR Contact Card</title>
-  <meta name="description" content="Scan to save Russell Spurlock's contact info." />
+  <title>Add Me to Your Contacts — Russell Spurlock</title>
+  <meta name="description" content="Tap or scan the code to save Russell Spurlock's contact info." />
   <meta name="robots" content="noindex" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
@@ -94,12 +94,21 @@
       margin-bottom: 24px;
     }
 
+    .qr-link {
+      display: block;
+      margin: 0 auto 16px;
+      max-width: 380px;
+      transition: transform 0.12s ease;
+    }
+
+    .qr-link:hover, .qr-link:focus {
+      transform: scale(1.02);
+    }
+
     .qr-image {
       display: block;
       width: 100%;
-      max-width: 380px;
       height: auto;
-      margin: 0 auto 16px;
       border-radius: 8px;
     }
 
@@ -229,16 +238,14 @@
 <main>
   <div class="qr-wrap">
     <div class="qr-kicker">Russell Spurlock, CFII</div>
-    <h1 class="qr-title">Scan to Save My Contact</h1>
-    <p class="qr-subtitle">Point your camera at the code &mdash; your phone will offer to add me to Contacts.</p>
+    <h1 class="qr-title">Tap or Scan to Save My Contact</h1>
+    <p class="qr-subtitle">Tap the code on your own phone, or point another phone's camera at it &mdash; either way you'll be offered to add me to Contacts.</p>
 
-    <img src="/images-new/card-qr.png" alt="QR code linking to russellspurlock.com/card" class="qr-image" />
+    <a href="/card" class="qr-link" aria-label="Save Russell Spurlock to your contacts">
+      <img src="/images-new/card-qr.png" alt="QR code linking to russellspurlock.com/card" class="qr-image" />
+    </a>
 
     <div class="qr-url"><a href="/card">russellspurlock.com/card</a></div>
-
-    <a href="/card" class="tap-btn">
-      <i class="bi bi-person-plus-fill"></i>Or tap here to save directly
-    </a>
 
     <a href="/images-new/card-qr.png" download="russell-spurlock-qr.png" class="download-link">
       <i class="bi bi-download"></i> Download QR image
@@ -296,7 +303,7 @@
       'Phone: ' + phone
     ];
     if (note) bodyLines.push('How we met: ' + note);
-    bodyLines.push('', 'Sent from russellspurlock.com/qr');
+    bodyLines.push('', 'Sent from russellspurlock.com/add-me');
 
     var href = 'mailto:russell@russellspurlock.com'
       + '?subject=' + encodeURIComponent(subject)
