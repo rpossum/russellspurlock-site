@@ -33,6 +33,37 @@
 
     a { text-decoration: none; }
 
+    .navbar {
+      background: #ffffff !important;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar-brand {
+      font-weight: 600;
+      color: var(--primary-color) !important;
+      font-size: 1rem;
+      white-space: normal;
+      line-height: 1.2;
+    }
+
+    .nav-link {
+      color: var(--text-color) !important;
+      font-weight: 500;
+      margin-left: 1rem;
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color) !important;
+    }
+
+    .brand-desktop { display: inline; }
+    .brand-mobile { display: none; }
+    @media (max-width: 768px) {
+      .navbar-brand { font-size: 0.85rem; }
+      .brand-desktop { display: none !important; }
+      .brand-mobile { display: inline !important; }
+    }
+
     main {
       flex: 1;
       display: flex;
@@ -176,6 +207,40 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="/">
+      <span class="brand-desktop">Russell Spurlock : Commercial Pilot : Flight Instructor</span>
+      <span class="brand-mobile d-none">Russell Spurlock, CFII</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#scheduling">Scheduling</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="/vcard">My vCard</a></li>
+        <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="/#training">Training</a></li>
+            <li><a class="dropdown-item" href="/#jet">Turbine</a></li>
+            <li><a class="dropdown-item" href="/#rates">Rates</a></li>
+            <li><a class="dropdown-item" href="/#testimonials">Testimonials</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/possumpilot/">Study Guides</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="height: 80px;"></div>
+
 <main>
   <div class="card-wrap">
     <img src="/images-new/russell-headshot.jpg" alt="Russell Spurlock" class="card-photo" />
@@ -261,6 +326,8 @@
     window.location.href = href;
   });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Vercel Web Analytics -->
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
