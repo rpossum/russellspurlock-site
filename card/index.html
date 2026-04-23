@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Russell Spurlock — Contact Card</title>
+  <meta name="description" content="Save Russell Spurlock's contact info and share yours back." />
+  <meta name="robots" content="noindex" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #004080;
+      --accent-color: #ff8000;
+      --text-color: #1f1f1f;
+      --bg-light: #f9f9f9;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background: var(--bg-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a { text-decoration: none; }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+
+    .card-wrap {
+      max-width: 520px;
+      width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 40px 32px;
+    }
+
+    .card-logo {
+      display: block;
+      margin: 0 auto 16px;
+      max-width: 110px;
+      height: auto;
+    }
+
+    .card-name {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin: 0 0 2px;
+    }
+
+    .card-title {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .save-btn {
+      display: block;
+      width: 100%;
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .save-btn:hover, .save-btn:focus {
+      background: #003060;
+      color: #fff;
+    }
+
+    .save-btn i { margin-right: 6px; }
+
+    .status {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 10px;
+      min-height: 1.2em;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #999;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 28px 0 20px;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e0e0e0;
+    }
+
+    .form-label-sm {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 4px;
+    }
+
+    .send-btn {
+      background: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      width: 100%;
+    }
+
+    .send-btn:hover, .send-btn:focus {
+      background: #e67300;
+      color: #fff;
+    }
+
+    .site-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.85rem;
+    }
+
+    .site-link a { color: var(--primary-color); font-weight: 600; }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      padding: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <div class="card-wrap">
+    <img src="/images-new/plane_blue.png" alt="" class="card-logo" />
+    <h1 class="card-name">Russell Spurlock</h1>
+    <p class="card-title">Commercial Pilot &bull; CFII &bull; Cape Coral, FL</p>
+
+    <a id="save-link" href="./russell-spurlock.vcf" download="russell-spurlock.vcf" class="save-btn">
+      <i class="bi bi-person-plus-fill"></i>Save My Contact
+    </a>
+    <div id="status" class="status">Starting download&hellip;</div>
+
+    <div class="divider">Send Me Yours</div>
+
+    <form id="send-form" novalidate>
+      <div class="mb-2">
+        <label for="f-name" class="form-label-sm">Your name</label>
+        <input id="f-name" type="text" class="form-control" required autocomplete="name" />
+      </div>
+      <div class="mb-2">
+        <label for="f-email" class="form-label-sm">Email</label>
+        <input id="f-email" type="email" class="form-control" autocomplete="email" />
+      </div>
+      <div class="mb-2">
+        <label for="f-phone" class="form-label-sm">Phone</label>
+        <input id="f-phone" type="tel" class="form-control" autocomplete="tel" />
+      </div>
+      <div class="mb-3">
+        <label for="f-note" class="form-label-sm">How we met (optional)</label>
+        <input id="f-note" type="text" class="form-control" />
+      </div>
+      <button type="submit" class="send-btn">
+        <i class="bi bi-envelope-fill"></i> Send to Russell
+      </button>
+    </form>
+
+    <p class="site-link"><a href="/">russellspurlock.com</a></p>
+  </div>
+</main>
+
+<footer>&copy; <span id="yr"></span> Russell Spurlock</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  (function autoDownload() {
+    var link = document.getElementById('save-link');
+    var status = document.getElementById('status');
+    try {
+      link.click();
+      status.textContent = "If the contact card didn't open, tap the button above.";
+    } catch (e) {
+      status.textContent = "Tap the button above to save my contact.";
+    }
+  })();
+
+  document.getElementById('send-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name  = document.getElementById('f-name').value.trim();
+    var email = document.getElementById('f-email').value.trim();
+    var phone = document.getElementById('f-phone').value.trim();
+    var note  = document.getElementById('f-note').value.trim();
+
+    if (!name) {
+      document.getElementById('f-name').focus();
+      return;
+    }
+
+    var subject = 'Contact info from ' + name;
+    var bodyLines = [
+      'Name: ' + name,
+      'Email: ' + email,
+      'Phone: ' + phone
+    ];
+    if (note) bodyLines.push('How we met: ' + note);
+    bodyLines.push('', 'Sent from russellspurlock.com/card');
+
+    var href = 'mailto:russell@russellspurlock.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body='    + encodeURIComponent(bodyLines.join('\n'));
+
+    window.location.href = href;
+  });
+</script>
+
+<!-- Vercel Web Analytics -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
