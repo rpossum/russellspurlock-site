@@ -71,3 +71,8 @@ Russell has aviation apps hosted separately. They live at their own URLs (Railwa
 3. The `resume/index.html` is just a redirect — the actual resume PDF lives on Google Drive
 4. Do not touch DNS MX/SPF/DKIM records — email forwarding depends on them
 5. When deploying changes, just push to `main` — Vercel handles the rest
+6. **Always use absolute paths for same-site links inside sub-pages.** Vercel serves clean URLs like `/card` and `/resume` without trailing slashes. A relative link such as `href="./foo.vcf"` on `/card/index.html` resolves to `/foo.vcf` (404) when visited as `/card`, but to `/card/foo.vcf` (correct) when visited as `/card/`. Write `href="/card/foo.vcf"` instead to avoid the trap.
+
+## Debugging Notes
+- **Download or asset 404s:** before blaming MIME types, headers, or the CDN, *read the URL the browser is actually fetching*. An ~80-byte response body is Vercel's JSON 404 page — the real fix is almost always a wrong path, not a serving-layer issue.
+- **Curling production from a sandbox with flaky DNS:** use `curl --resolve russellspurlock.com:443:76.76.21.21 https://russellspurlock.com/...`. Vercel's anycast IP is stable and the `--resolve` pin bypasses the sandbox's DNS layer.
