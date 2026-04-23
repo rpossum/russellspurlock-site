@@ -258,6 +258,17 @@
   .vol-text { font-size: 10pt; }
 
   /* === Download bar === */
+  .vcard-link {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+  .vcard-link i { margin-right: 4px; }
+  .vcard-link:hover, .vcard-link:focus { text-decoration: underline; }
+
   .download-bar {
     display: flex;
     flex-wrap: wrap;
@@ -368,7 +379,11 @@
 
 <!-- Download buttons (top) -->
 <section class="download-section py-4">
-  <div class="container">
+  <div class="container text-center">
+    <a href="/card/russell-spurlock.vcf" download="russell-spurlock.vcf" class="vcard-link"
+       onclick="window.va && va('event',{name:'vcard_download',data:{source:'resume_top'}})">
+      <i class="bi bi-person-plus"></i>Save my contact (vCard)
+    </a>
     <div class="download-bar">
       <a href="/resume/pdfs/Russell-Spurlock-Resume.pdf" download class="btn-download"
          onclick="window.va && va('event',{name:'resume_download',data:{variant:'resume',position:'top'}})">
@@ -553,7 +568,11 @@
 
 <!-- Download buttons (bottom) -->
 <section class="download-section pb-5">
-  <div class="container">
+  <div class="container text-center">
+    <a href="/card/russell-spurlock.vcf" download="russell-spurlock.vcf" class="vcard-link"
+       onclick="window.va && va('event',{name:'vcard_download',data:{source:'resume_bottom'}})">
+      <i class="bi bi-person-plus"></i>Save my contact (vCard)
+    </a>
     <div class="download-bar">
       <a href="/resume/pdfs/Russell-Spurlock-Resume.pdf" download class="btn-download"
          onclick="window.va && va('event',{name:'resume_download',data:{variant:'resume',position:'bottom'}})">
