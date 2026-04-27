@@ -38,14 +38,6 @@
   }
   .nav-link:hover { color: var(--primary-color) !important; }
 
-  .brand-desktop { display: inline; }
-  .brand-mobile { display: none; }
-  @media (max-width: 768px) {
-    .navbar-brand { font-size: 0.85rem; }
-    .brand-desktop { display: none !important; }
-    .brand-mobile { display: inline !important; }
-  }
-
   footer {
     background-color: #f1f1f1;
     color: #333;
@@ -258,17 +250,6 @@
   .vol-text { font-size: 10pt; }
 
   /* === Download bar === */
-  .vcard-link {
-    display: inline-block;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.85rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 0.6rem;
-  }
-  .vcard-link i { margin-right: 4px; }
-  .vcard-link:hover, .vcard-link:focus { text-decoration: underline; }
-
   .download-bar {
     display: flex;
     flex-wrap: wrap;
@@ -345,31 +326,16 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
   <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="/">
-      <span class="brand-desktop">Russell Spurlock : Commercial Pilot : Flight Instructor</span>
-      <span class="brand-mobile d-none">Russell Spurlock, CFII</span>
-    </a>
+    <a class="navbar-brand fw-bold text-primary" href="/">Russell Spurlock</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/#scheduling">Scheduling</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#training">Training</a></li>
+        <li class="nav-item"><a class="nav-link" href="/#jet">Turbine</a></li>
         <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="/vcard">My vCard</a></li>
-        <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/#training">Training</a></li>
-            <li><a class="dropdown-item" href="/#jet">Turbine</a></li>
-            <li><a class="dropdown-item" href="/#rates">Rates</a></li>
-            <li><a class="dropdown-item" href="/#testimonials">Testimonials</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/possumpilot/">Study Guides</a></li>
-          </ul>
-        </li>
       </ul>
     </div>
   </div>
@@ -379,11 +345,7 @@
 
 <!-- Download buttons (top) -->
 <section class="download-section py-4">
-  <div class="container text-center">
-    <a href="/card/russell-spurlock.vcf" download="russell-spurlock.vcf" class="vcard-link"
-       onclick="window.va && va('event',{name:'vcard_download',data:{source:'resume_top'}})">
-      <i class="bi bi-person-plus"></i>Save my contact (vCard)
-    </a>
+  <div class="container">
     <div class="download-bar">
       <a href="/resume/pdfs/Russell-Spurlock-Resume.pdf" download class="btn-download"
          onclick="window.va && va('event',{name:'resume_download',data:{variant:'resume',position:'top'}})">
@@ -414,7 +376,7 @@
       <div class="cv-row">
         <div class="cv-label">Objective:</div>
         <div class="cv-content">
-          CFII with multi-engine rating and 1,584 hours seeking an SIC position in Part 135 or Part 91
+          CFII with multi-engine rating and 1,593 hours seeking an SIC position in Part 135 or Part 91
           operations. Offers professional maturity, growing turbine experience, and strong CRM skills
           developed through right-seat mentorship. Committed to a long-term career in charter and corporate
           aviation.
@@ -441,11 +403,11 @@
       <div class="flight-times-grid" style="margin-bottom: 20px;">
         <div class="ft-card ft-total">
           <div class="ft-label">Total</div>
-          <div class="ft-value">1,584</div>
+          <div class="ft-value">1,593</div>
         </div>
         <div class="ft-card">
           <div class="ft-label">PIC</div>
-          <div class="ft-value">1,480</div>
+          <div class="ft-value">1,488</div>
         </div>
         <div class="ft-card">
           <div class="ft-label">Instrument</div>
@@ -457,7 +419,7 @@
         </div>
         <div class="ft-card">
           <div class="ft-label">Prev 12 Months</div>
-          <div class="ft-value">708</div>
+          <div class="ft-value">699</div>
         </div>
         <div class="ft-card">
           <div class="ft-label">Multi-Engine</div>
@@ -568,11 +530,7 @@
 
 <!-- Download buttons (bottom) -->
 <section class="download-section pb-5">
-  <div class="container text-center">
-    <a href="/card/russell-spurlock.vcf" download="russell-spurlock.vcf" class="vcard-link"
-       onclick="window.va && va('event',{name:'vcard_download',data:{source:'resume_bottom'}})">
-      <i class="bi bi-person-plus"></i>Save my contact (vCard)
-    </a>
+  <div class="container">
     <div class="download-bar">
       <a href="/resume/pdfs/Russell-Spurlock-Resume.pdf" download class="btn-download"
          onclick="window.va && va('event',{name:'resume_download',data:{variant:'resume',position:'bottom'}})">
